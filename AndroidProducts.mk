@@ -5,9 +5,9 @@
 #
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/lineage_devon.mk
+    $(LOCAL_DIR)/lmodroid_devon.mk
 
 COMMON_LUNCH_CHOICES := \
-    lineage_devon-user \
-    lineage_devon-userdebug \
-    lineage_devon-eng
+    lmodroid_devon-user \
+    lmodroid_devon-userdebug \
+    lmodroid_devon-eng
