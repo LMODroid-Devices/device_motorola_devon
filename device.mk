@@ -1,6 +1,5 @@
 #
-# Copyright (C) 2022 The LineageOS Project
-#
+# SPDX-FileCopyrightText: 2022-2024 The LineageOS Project
 # SPDX-License-Identifier: Apache-2.0
 #
 
@@ -59,7 +58,6 @@ PRODUCT_PACKAGES += \
     init.mmi.overlay.rc
 
 # Shipping API level
-BOARD_API_LEVEL := 30
 BOARD_SHIPPING_API_LEVEL := 30
 PRODUCT_SHIPPING_API_LEVEL := 31
 
