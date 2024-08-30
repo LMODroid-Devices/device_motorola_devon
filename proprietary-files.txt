@@ -13,7 +13,7 @@ vendor/etc/acdbdata/nn_ns_models/fai__2.0.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_ns_models/fai__2.2.0_0.1__3.0.0_0.0__eai_1.00.pmd
 vendor/etc/acdbdata/nn_vad_models/fai_3.0.0_0.0_eai_1.00.pmd
 
-# Audio Firmware
+# Audio firmware
 vendor/firmware/aw882xx_afe_params.bin
 vendor/firmware/aw882xx_mono.bin
 vendor/firmware/aw882xx_pid_1852_acf.bin
@@ -22,7 +22,6 @@ vendor/firmware/aw882xx_spk_reg.bin
 vendor/firmware/aw_skt.bin
 
 # Camera
-vendor/lib/libcamxexternalformatutils.so
 vendor/lib64/camera/com.mot.eeprom.mot_devon_ov02b10_otp.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p128e_s5kjn1_eeprom.so
 vendor/lib64/camera/com.mot.eeprom.mot_gt24p64b_hi1634q_eeprom.so
@@ -111,7 +110,8 @@ vendor/lib64/com.qti.feature2.stub.so
 vendor/lib64/com.qti.feature2.swmf.so
 vendor/lib64/hw/camera.qcom.so
 vendor/lib64/hw/com.qti.chi.override.so
-vendor/lib64/libBSTSWAD.so
+# libBSTSWAD depends on NDK libnativewindow and build is unable to resolve its symbols
+vendor/lib64/libBSTSWAD.so;DISABLE_CHECKELF
 vendor/lib64/libBSTbase_share.so
 vendor/lib64/libarcsoft_chi_utils.so
 vendor/lib64/libarcsoft_low_light_shot.so
@@ -155,7 +155,7 @@ vendor/lib64/libvidhance_fbc.so
 vendor/lib64/libvidhance_horizon_correction.so
 vendor/lib64/libvidhance_stabilizer.so
 
-# Camera-configs
+# Camera configs
 vendor/etc/camera/SwadAIMod.bin
 vendor/etc/camera/SwadCalib.bin
 vendor/etc/camera/SwadParamList.txt
@@ -185,11 +185,8 @@ vendor/usr/idc/uinput-fpc.idc
 vendor/usr/keylayout/uinput-egis.kl
 vendor/usr/keylayout/uinput-fpc.kl
 
-# Graphics firmware
+# Graphics (Adreno firmware)
 vendor/firmware/a630_sqe.fw
-vendor/firmware/a650_gmu.bin
-vendor/firmware/a650_sqe.fw
-vendor/firmware/a702_sqe.fw
 
 # NFC (ST)
 vendor/bin/STFlashTool
@@ -207,7 +204,7 @@ vendor/firmware/st21nfc_fw7.bin
 # SAR firmware
 vendor/firmware/aw9610x_0.bin
 
-# Sensor-configs
+# Sensors configs
 vendor/etc/sensors/config/bengal_bmi3x0_0.json
 vendor/etc/sensors/config/bengal_default_sensors.json
 vendor/etc/sensors/config/bengal_dynamic_sensors.json
@@ -262,8 +259,8 @@ vendor/bin/thermal-engine
 vendor/etc/init/init_thermal-engine.rc
 vendor/etc/thermal-engine-devon.conf
 vendor/etc/thermal-engine.conf
--vendor/lib/libthermalclient.so
--vendor/lib64/libthermalclient.so
+vendor/lib/libthermalclient.so
+vendor/lib64/libthermalclient.so
 
 # Touchscreen firmware
 vendor/firmware/ILITEK_FW
